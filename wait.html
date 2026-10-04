@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>입장 대기 · 정치국제학과 졸업해서 뭐 할래?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#05050a;color:#fff}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased}
+body.idle{cursor:none}
+.bg{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.bloom{position:absolute;width:110vmax;height:110vmax;border-radius:50%;filter:blur(10px)}
+.b1{left:-30vmax;top:-45vmax;background:radial-gradient(circle,rgba(41,151,255,.42),rgba(41,151,255,.12) 38%,transparent 66%);animation:d1 48s ease-in-out infinite alternate}
+.b2{right:-38vmax;top:-20vmax;background:radial-gradient(circle,rgba(112,92,255,.34),rgba(112,92,255,.1) 38%,transparent 66%);animation:d2 56s ease-in-out infinite alternate}
+.b3{left:10vmax;bottom:-70vmax;background:radial-gradient(circle,rgba(0,102,204,.40),rgba(0,102,204,.1) 40%,transparent 67%);animation:d3 64s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate(14vmax,10vmax) scale(1.1)}}
+@keyframes d2{to{transform:translate(-12vmax,14vmax) scale(1.08)}}
+@keyframes d3{to{transform:translate(10vmax,-12vmax) scale(1.12)}}
+.vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(0,0,0,.6))}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:0 0}
+.abs{position:absolute}
+.top{left:96px;right:96px;top:58px;display:flex;justify-content:space-between;align-items:center;font-size:26px;color:#c7c7cc;letter-spacing:-.01em}
+.top b{color:#fff;font-weight:700;font-variant-numeric:tabular-nums;margin-left:12px}
+.cd{left:0;width:1920px;top:178px;text-align:center}
+.cd-label{font-size:40px;font-weight:700;color:#5cb0ff}
+.cd-num{margin-top:4px;font-size:320px;font-weight:900;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.cd-num.long{font-size:250px;line-height:1.28}
+.cd-num.word{font-size:190px;line-height:1.684;letter-spacing:-.04em}
+.cd-num.pulse{animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{text-shadow:0 0 90px rgba(41,151,255,.95)}}
+.cd-sub{margin-top:16px;font-size:36px;font-weight:500;color:#a1a1aa}
+.divider{left:900px;top:726px;width:120px;height:2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent)}
+.title{left:0;width:1920px;top:770px;text-align:center;font-size:108px;font-weight:900;line-height:1.1;letter-spacing:-.04em;white-space:nowrap}
+.grad{background:linear-gradient(135deg,#a8d8ff,#2997ff 45%,#0a5bd6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.title .grad{filter:drop-shadow(0 0 48px rgba(41,151,255,.5))}
+.ticker{left:0;right:0;top:996px;height:44px;overflow:hidden;border-top:1.5px solid rgba(255,255,255,.08)}
+.track{display:flex;width:max-content;padding-top:12px;animation:tick 60s linear infinite}
+.track span{font-size:24px;color:#8e8e93;white-space:nowrap;padding-right:64px}
+.track b{color:#5cb0ff;font-weight:700}
+@keyframes tick{to{transform:translateX(-50%)}}
+.hint{position:fixed;right:24px;bottom:18px;font-size:14px;color:rgba(255,255,255,.45);transition:opacity .6s}
+.fs .hint{opacity:0}
+@media (prefers-reduced-motion:reduce){.bloom,.track{animation:none}}
+</style>
+</head>
+<body>
+<div class="bg"><div class="bloom b1"></div><div class="bloom b2"></div><div class="bloom b3"></div></div>
+<div class="vig"></div>
+<div id="stage">
+  <div class="abs top"><span>2026-2학기 이혜정 교수님 CAU 세미나</span><span>현재 시각<b id="clock">--:--:--</b></span></div>
+  <div class="abs cd">
+    <p class="cd-label" id="cdLabel">시작까지</p>
+    <p class="cd-num" id="cdNum">--:--</p>
+    <p class="cd-sub" id="cdSub">오후 6시 30분 시작</p>
+  </div>
+  <div class="abs divider"></div>
+  <h1 class="abs title">정치국제학과 졸업해서 <span class="grad">뭐 할래?</span></h1>
+
+  <div class="abs ticker"><div class="track" id="track"></div></div>
+</div>
+<p class="hint">화면을 클릭하면 전체 화면으로 전환됩니다</p>
+
+<script>
+/* 16:9 화면을 어떤 모니터에도 비율 그대로 맞춤 */
+var stage=document.getElementById('stage');
+function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform='scale('+s+') translate(-50%,-50%)';}
+addEventListener('resize',fit);fit();
+
+/* 하단 흐르는 띠 */
+var item='<span><b>2026. 10. 08 (목) 18:30</b> &nbsp;·&nbsp; 중앙대학교 대학원(302관) 5층 대회의실 &nbsp;·&nbsp; 정치국제학과 졸업해서 뭐 할래? &nbsp;·&nbsp; 2026-2학기 이혜정 교수님 CAU 세미나</span>';
+document.getElementById('track').innerHTML=(item+item+item+item);
+
+/* 카운트다운: 기기 시간대와 상관없이 한국 시간 18:30 기준
+   리허설: 주소 끝에 ?demo 를 붙이면 12분 뒤 시작으로 시험해 볼 수 있음 */
+var KST=9*3600000;
+var target=Date.UTC(2026,9,8,9,30,0);
+if(location.search.indexOf('demo')>-1) target=Date.now()+12*60*1000+3000;
+var $num=document.getElementById('cdNum'),$lab=document.getElementById('cdLabel'),$sub=document.getElementById('cdSub'),$clk=document.getElementById('clock');
+function p2(n){return (n<10?'0':'')+n;}
+function tick(){
+  var now=Date.now(),k=new Date(now+KST);
+  $clk.textContent=p2(k.getUTCHours())+':'+p2(k.getUTCMinutes())+':'+p2(k.getUTCSeconds());
+  var d=Math.ceil((target-now)/1000);
+  $num.classList.remove('word','pulse','long');
+  if(d>=86400){
+    $lab.textContent='행사까지';$num.textContent='D-'+Math.ceil(d/86400);$sub.textContent='10월 8일(목) 오후 6시 30분';
+  }else if(d>0){
+    var h=Math.floor(d/3600),m=Math.floor(d%3600/60),s=d%60;
+    $lab.textContent='시작까지';
+    $num.textContent=h>0?(h+':'+p2(m)+':'+p2(s)):(p2(m)+':'+p2(s));
+    if(h>0)$num.classList.add('long');
+    $sub.textContent=d<=60?'잠시 후 시작합니다':'오후 6시 30분 시작';
+    if(d<=60)$num.classList.add('pulse');
+  }else{
+    $lab.textContent='';$num.textContent='지금 시작합니다';$num.classList.add('word');$sub.textContent='';
+  }
+}
+setInterval(tick,250);tick();
+
+/* 클릭하면 전체 화면 + 화면 꺼짐 방지, 마우스 가만히 있으면 커서 숨김 */
+var lock=null;
+document.addEventListener('click',function(){
+  var el=document.documentElement;
+  if(!document.fullscreenElement&&el.requestFullscreen)el.requestFullscreen().catch(function(){});
+  try{if(navigator.wakeLock&&!lock)navigator.wakeLock.request('screen').then(function(l){lock=l;l.addEventListener('release',function(){lock=null;});}).catch(function(){});}catch(e){}
+});
+document.addEventListener('fullscreenchange',function(){document.body.classList.toggle('fs',!!document.fullscreenElement);});
+var idleT;
+function wake(){document.body.classList.remove('idle');clearTimeout(idleT);idleT=setTimeout(function(){document.body.classList.add('idle');},2500);}
+addEventListener('mousemove',wake);wake();
+</script>
+</body>
+</html>
