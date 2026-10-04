@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>정치국제학과 졸업해서 뭐 할래?</title>
+<meta name="description" content="2026-2학기 이혜정 교수님 CAU 세미나 — 2026년 10월 8일(목) 오후 6시 30분, 중앙대학교 대학원 5층 대회의실">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+color-scheme:light;
+--canvas:#ffffff; --tile-dark:#1e1e22; --parchment:#f5f5f7;
+--nav-bg:rgba(0,0,0,.72); --subnav-bg:rgba(250,250,252,.68);
+--ink:#1d1d1f; --ink-80:#333333; --ink-48:#6e6e73;
+--on-dark:#ffffff; --on-dark-muted:#c7c7cc;
+--hairline:rgba(0,0,0,.09); --divider-soft:rgba(0,0,0,.06);
+--hairline-on-dark:rgba(255,255,255,.14);
+--primary:#0066cc; --primary-focus:#0071e3; --btn-bg:#0066cc;
+--accent-a:#2997ff; --accent-b:#0066cc;
+--glass-bg:rgba(255,255,255,.55); --glass-border:rgba(255,255,255,.75);
+--glass-inset:inset 0 1px 0 rgba(255,255,255,.9);
+--glass-drop:0 16px 46px rgba(20,24,40,.10);
+--glass-solid:rgba(255,255,255,.9);
+--bloom-1:rgba(41,151,255,.28); --bloom-2:rgba(94,92,230,.22); --bloom-3:rgba(0,102,204,.18);
+--noise-op:.04;
+--font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,system-ui,
+"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+--pad-x:clamp(20px, 5vw, 48px);
+--pad-y:clamp(64px, 8vw, 104px);
+--nav-h:100px;
+--w-text:940px; --w-mid:1060px; --w-wide:1200px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+body{
+margin:0;background:var(--canvas);color:var(--ink);font-family:var(--font);
+font-size:17px;font-weight:400;line-height:1.62;letter-spacing:-0.02em;
+word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;height:auto;display:block;}
+a{color:var(--primary);text-decoration:none;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--primary-focus);outline-offset:3px;border-radius:6px;}
+h1,h2,h3,p,ul,ol,dl,dd,figure,figcaption{margin:0;}
+ul,ol{padding:0;list-style:none;}
+.wrap{max-width:var(--w-text);margin-inline:auto;padding-inline:var(--pad-x);}
+.wrap-mid{max-width:var(--w-mid);margin-inline:auto;padding-inline:var(--pad-x);}
+.wrap-wide{max-width:var(--w-wide);margin-inline:auto;padding-inline:var(--pad-x);}
+section{padding-block:var(--pad-y);scroll-margin-top:var(--nav-h);}
+.atmo{position:relative;overflow:hidden;isolation:isolate;}
+.atmo > *{position:relative;z-index:2;}
+.atmo::before{content:"";position:absolute;inset:-30%;z-index:0;}
+.atmo::after{
+content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:var(--noise-op);
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero::before{
+background-image:
+radial-gradient(46% 40% at 20% 10%, var(--bloom-1), transparent 66%),
+radial-gradient(42% 38% at 82% 20%, var(--bloom-2), transparent 64%),
+radial-gradient(64% 48% at 50% 86%, var(--bloom-3), transparent 68%);
+animation:drift 30s ease-in-out infinite alternate;
+}
+@keyframes drift{to{transform:translate3d(2.4%,-1.8%,0) scale(1.07);}}
+@media (prefers-reduced-motion: reduce){.hero::before{animation:none;}}
+#about::before{
+background-image:
+radial-gradient(42% 26% at 10% 2%,  var(--bloom-1), transparent 64%),
+radial-gradient(40% 24% at 92% 34%, var(--bloom-2), transparent 62%),
+radial-gradient(52% 28% at 58% 98%, var(--bloom-3), transparent 66%);
+}
+#speakers::before{
+background-image:
+radial-gradient(40% 26% at 84% 0%,  var(--bloom-3), transparent 64%),
+radial-gradient(44% 26% at 6% 52%,  var(--bloom-1), transparent 66%),
+radial-gradient(42% 24% at 92% 96%, var(--bloom-2), transparent 64%);
+}
+#venue::before{
+background-image:
+radial-gradient(44% 40% at 94% 10%, var(--bloom-2), transparent 64%),
+radial-gradient(42% 38% at 4% 86%,  var(--bloom-1), transparent 64%);
+}
+.glass{
+background:var(--glass-bg);
+-webkit-backdrop-filter:blur(30px) saturate(180%);
+backdrop-filter:blur(30px) saturate(180%);
+border:1px solid var(--glass-border);
+box-shadow:var(--glass-inset), var(--glass-drop);
+border-radius:20px;
+}
+.glass-dark{
+background:rgba(255,255,255,.075);
+-webkit-backdrop-filter:blur(26px) saturate(170%);
+backdrop-filter:blur(26px) saturate(170%);
+border:1px solid rgba(255,255,255,.16);
+box-shadow:inset 0 1px 0 rgba(255,255,255,.19), 0 18px 50px rgba(0,0,0,.34);
+border-radius:20px;
+}
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){
+.glass{background:var(--glass-solid);}
+.glass-dark{background:rgba(255,255,255,.13);}
+}
+.h1{font-size:clamp(36px,7.6vw,80px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;text-wrap:balance;}
+.h2{font-size:clamp(28px,4.4vw,46px);font-weight:700;line-height:1.2;letter-spacing:-0.025em;text-wrap:balance;}
+.h3{font-size:clamp(19px,2vw,21px);font-weight:700;line-height:1.35;letter-spacing:-0.022em;}
+.lead{font-size:clamp(18px,2.2vw,24px);font-weight:300;line-height:1.58;letter-spacing:-0.018em;max-width:34em;}
+.fine{font-size:12px;line-height:1.6;letter-spacing:-0.01em;color:var(--ink-48);}
+.navstack{position:sticky;top:0;z-index:50;}
+.globalnav{
+background:var(--nav-bg);
+-webkit-backdrop-filter:blur(20px) saturate(180%);
+backdrop-filter:blur(20px) saturate(180%);
+color:#fff;min-height:46px;display:flex;align-items:center;
+}
+.globalnav .wrap-wide{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;font-size:12px;letter-spacing:-0.01em;line-height:1.4;}
+.globalnav strong{font-weight:400;}
+.nav-right{display:flex;align-items:center;gap:14px;}
+.nav-right span{color:#a1a1a6;}
+.subnav{
+background:var(--subnav-bg);
+-webkit-backdrop-filter:blur(22px) saturate(180%);
+backdrop-filter:blur(22px) saturate(180%);
+border-bottom:1px solid var(--divider-soft);
+}
+.subnav .wrap-wide{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.crumb{display:flex;align-items:baseline;gap:9px;min-width:0;}
+.crumb .lv1{font-size:14px;letter-spacing:-0.016em;color:var(--ink-48);white-space:nowrap;}
+.crumb .sep{font-size:12px;color:var(--ink-48);flex:none;}
+.crumb .lv2{
+font-size:clamp(15px,1.9vw,19px);font-weight:700;letter-spacing:-0.026em;color:var(--ink);
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tabs{display:flex;align-items:center;gap:6px;flex:none;}
+.tabs a{
+font-size:14px;font-weight:600;letter-spacing:-0.016em;color:var(--primary);
+padding:8px 16px;border-radius:9999px;white-space:nowrap;background:rgba(0,102,204,.08);
+transition:color .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+.tabs a.on{
+color:#fff;background:linear-gradient(140deg,var(--accent-a),var(--accent-b));
+box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 6px 16px rgba(0,102,204,.3);
+}
+@media (max-width:767px){
+:root{--nav-h:144px;}
+.subnav .wrap-wide{flex-direction:column;align-items:stretch;gap:0;min-height:0;}
+.crumb{flex-direction:column;align-items:flex-start;gap:1px;padding:10px 0 8px;}
+.crumb .sep{display:none;}
+.crumb .lv1{font-size:12px;}
+.crumb .lv2{font-size:18px;white-space:normal;}
+.tabs{
+overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:9px;
+margin-inline:calc(var(--pad-x) * -1);padding-inline:var(--pad-x);
+}
+.tabs::-webkit-scrollbar{display:none;}
+}
+@media (prefers-reduced-motion: reduce){.tabs a{transition:none;}}
+.btn{
+display:inline-flex;align-items:center;justify-content:center;
+min-height:46px;padding:12px 24px;border-radius:9999px;border:1px solid transparent;
+font-family:inherit;font-size:17px;font-weight:400;letter-spacing:-0.02em;
+cursor:pointer;transition:transform .12s ease;text-align:center;
+}
+.btn:active{transform:scale(.95);}
+.btn-primary{background:var(--btn-bg);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.3), 0 10px 28px rgba(0,102,204,.34);}
+.btn-glass{
+color:var(--ink);background:var(--glass-bg);
+-webkit-backdrop-filter:blur(24px) saturate(180%);
+backdrop-filter:blur(24px) saturate(180%);
+border-color:var(--glass-border);box-shadow:var(--glass-inset), 0 10px 30px rgba(20,24,40,.12);
+}
+.btn-sm{min-height:42px;padding:10px 20px;font-size:15px;}
+@media (prefers-reduced-motion: reduce){.btn,#themeBtn{transition:none;}.btn:active,#themeBtn:active{transform:none;}}
+.hero{background:var(--canvas);padding-block:clamp(72px,11vw,132px) clamp(64px,9vw,112px);text-align:center;}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;gap:clamp(18px,2.6vw,26px);}
+.kicker{font-size:clamp(14px,1.6vw,16px);font-weight:700;letter-spacing:-0.014em;color:var(--primary);}
+.hero .lead{margin-inline:auto;color:var(--ink-80);}
+.fields{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
+.fields li{
+font-size:clamp(15px,1.8vw,18px);font-weight:700;letter-spacing:-0.02em;color:#fff;
+padding:11px 24px;border-radius:9999px;
+background:linear-gradient(140deg,var(--accent-a),var(--accent-b));
+box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 10px 24px rgba(0,102,204,.28);
+}
+.dday{font-size:15px;letter-spacing:-0.016em;color:var(--ink-48);}
+.dday b{font-weight:600;color:var(--ink);}
+.spec{
+width:100%;max-width:820px;margin-top:clamp(4px,1.2vw,10px);
+display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:clamp(8px,1.4vw,14px);
+}
+.spec > div{padding:clamp(16px,2.4vw,24px) 14px;text-align:center;border-inline-start:1px solid var(--divider-soft);}
+.spec > div:first-child{border-inline-start:0;}
+.spec dt{font-size:13px;color:var(--ink-48);letter-spacing:-0.012em;margin-bottom:7px;}
+.spec dd{margin:0;font-size:clamp(15px,1.8vw,19px);font-weight:700;letter-spacing:-0.022em;line-height:1.35;}
+@media (max-width:599px){
+.spec{grid-template-columns:1fr;padding:6px 18px;}
+.spec > div{
+border-inline-start:0;border-top:1px solid var(--divider-soft);
+display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+text-align:left;padding-inline:0;padding-block:15px;
+}
+.spec > div:first-child{border-top:0;}
+.spec dt{margin-bottom:0;white-space:nowrap;}
+.spec dd{text-align:right;}
+}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.tile-dark{background:var(--tile-dark);color:var(--on-dark);}
+.tile-dark .lead,.tile-dark p{color:var(--on-dark-muted);}
+.tile-dark .h2,.tile-dark .h3{color:#fff;}
+.tile-parchment{background:var(--parchment);}
+.sec-head{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(40px,5.5vw,64px);}
+.poll{padding:clamp(28px,3.6vw,48px);}
+.poll .poll-label{
+font-size:clamp(17px,2.4vw,24px);font-weight:700;letter-spacing:-0.024em;
+line-height:1.4;color:#5cb0ff;
+}
+.poll-q{
+margin:clamp(18px,2.2vw,26px) 0 0;
+font-size:clamp(21px,3.6vw,34px);font-weight:700;line-height:1.36;
+letter-spacing:-0.03em;color:#fff;text-wrap:balance;
+}
+.poll .poll-note{
+margin-top:clamp(22px,2.6vw,30px);padding-top:18px;
+border-top:1px solid rgba(255,255,255,.13);
+font-size:13.5px;color:var(--on-dark-muted);
+}
+.overview{margin-top:clamp(52px,6.5vw,86px);display:flex;flex-direction:column;gap:16px;}
+.overview p.ov-q{color:#fff;}
+.overview p.ov-body{font-size:clamp(17px,2vw,19px);line-height:1.74;max-width:36em;}
+.overview p.ov-note{
+margin-top:16px;padding-left:15px;border-left:2px solid rgba(92,176,255,.55);
+font-size:14px;line-height:1.6;color:rgba(255,255,255,.6);
+}
+.agenda{margin-top:clamp(48px,6vw,76px);padding:clamp(24px,3.4vw,40px);}
+.agenda h3{margin-bottom:20px;color:#fff;}
+.agenda li{display:grid;grid-template-columns:114px 1fr;gap:18px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,.12);}
+.agenda li:first-of-type{border-top:0;padding-top:0;}
+.agenda .slot{font-weight:600;font-size:14.5px;letter-spacing:-0.01em;font-variant-numeric:tabular-nums;color:#5cb0ff;white-space:nowrap;}
+.agenda .host{
+margin:-4px 0 20px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.12);
+font-size:15px;font-weight:600;letter-spacing:-0.02em;color:#fff;
+}
+.agenda .host span{display:block;margin-top:3px;font-size:13.5px;font-weight:400;color:var(--on-dark-muted);}
+.agenda .what{font-size:16px;color:#fff;}
+.agenda .who{display:block;font-size:14px;line-height:1.66;color:var(--on-dark-muted);margin-top:4px;}
+@media (max-width:599px){.agenda li{grid-template-columns:1fr;gap:5px;}}
+.speakers{display:flex;flex-direction:column;gap:clamp(16px,2vw,22px);}
+.speaker{padding:clamp(26px,3.6vw,46px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,2.6vw,28px);}
+@media (min-width:880px){
+.speaker{grid-template-columns:minmax(230px,32%) minmax(0,1fr);gap:clamp(32px,4vw,60px);}
+.speaker .sp-body{margin-top:48px;}
+}
+.sp-field{
+display:inline-block;align-self:start;
+font-size:13px;font-weight:600;letter-spacing:0.01em;color:#fff;
+padding:7px 16px;border-radius:9999px;
+background:linear-gradient(140deg,var(--accent-a),var(--accent-b));
+box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 8px 20px rgba(0,102,204,.28);
+}
+.sp-name{font-size:clamp(28px,3.8vw,38px);font-weight:600;letter-spacing:-0.032em;line-height:1.15;margin-top:18px;}
+.sp-title{font-size:clamp(15px,1.7vw,17px);font-weight:600;letter-spacing:-0.022em;margin-top:11px;line-height:1.45;}
+.sp-cohort{font-size:14px;color:var(--ink-48);margin-top:5px;}
+.sp-link{
+margin-top:16px;padding-left:13px;border-left:2px solid var(--primary);
+font-size:13.5px;line-height:1.5;font-weight:600;letter-spacing:-0.016em;color:var(--primary);
+}
+@media (max-width:879px){.br-desk{display:none;}}
+.sp-body p{font-size:16px;line-height:1.82;color:var(--ink-80);}
+.sp-body p + p{margin-top:17px;}
+.sp-soon{border:1px dashed var(--hairline);border-radius:14px;padding:clamp(20px,2.6vw,28px);color:var(--ink-48);font-size:15px;line-height:1.7;}
+.sp-path{
+grid-column:1/-1;margin-top:clamp(6px,1vw,10px);padding-top:clamp(18px,2.2vw,24px);
+border-top:1px solid var(--divider-soft);
+display:flex;flex-wrap:wrap;align-items:center;gap:8px 11px;
+font-size:13.5px;line-height:1.5;color:var(--ink-48);
+}
+.sp-path em{font-style:normal;}
+.sp-path b{font-weight:600;color:var(--ink);}
+.sp-path i{font-style:normal;color:var(--primary);font-size:12px;}
+.venue{display:grid;gap:clamp(24px,3.4vw,40px);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:stretch;}
+.infocard{padding:clamp(24px,3.2vw,36px);}
+.infolist dt{font-size:13px;color:var(--ink-48);letter-spacing:-0.012em;}
+.infolist dd{margin:5px 0 24px;font-size:17px;line-height:1.6;}
+.infolist dd:last-child{margin-bottom:0;}
+.infolist .sub{display:block;font-size:15px;color:var(--ink-48);margin-top:2px;}
+.mapcard{overflow:hidden;display:flex;flex-direction:column;}
+.mapcard .mapcanvas,.mapcard .mapframe{flex:1 1 auto;}
+.mapframe{min-height:290px;}
+.mapcanvas{
+position:relative;min-height:236px;
+display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+padding:34px 24px;text-align:center;
+background:
+radial-gradient(60% 60% at 50% 42%, rgba(41,151,255,.22), transparent 70%),
+linear-gradient(160deg, rgba(41,151,255,.10), rgba(94,92,230,.08));
+}
+.pin{width:34px;height:34px;margin-bottom:10px;color:var(--primary);}
+.mapname{font-size:18px;font-weight:700;letter-spacing:-0.024em;}
+.mapaddr{font-size:14px;color:var(--ink-48);}
+.mapframe{width:100%;height:290px;border:0;display:block;}
+.maplinks{display:flex;flex-wrap:wrap;gap:8px;padding:16px;border-top:1px solid var(--divider-soft);}
+.maplinks .btn{flex:1 1 104px;padding-inline:12px;}
+footer{background:var(--parchment);padding-block:clamp(40px,5vw,64px);border-top:1px solid var(--divider-soft);}
+footer p{color:var(--ink-48);}
+.credits{
+display:grid;gap:clamp(24px,3vw,60px);
+grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+padding-bottom:clamp(26px,3vw,36px);border-bottom:1px solid var(--divider-soft);
+}
+.credits .credit-label{font-size:12.5px;font-weight:600;letter-spacing:-0.01em;color:var(--ink-48);margin-bottom:10px;}
+.credits .credit-body{font-size:16px;line-height:1.62;font-weight:600;letter-spacing:-0.022em;color:var(--ink);}
+.footmeta{margin-top:clamp(22px,2.6vw,30px);display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;}
+@media (prefers-reduced-motion: no-preference){
+.rise{opacity:0;transform:translateY(16px);animation:rise .75s cubic-bezier(.22,.61,.36,1) forwards;}
+.rise:nth-child(1){animation-delay:.06s} .rise:nth-child(2){animation-delay:.15s}
+.rise:nth-child(3){animation-delay:.24s} .rise:nth-child(4){animation-delay:.33s}
+.rise:nth-child(5){animation-delay:.42s} .rise:nth-child(6){animation-delay:.51s}
+.rise:nth-child(7){animation-delay:.60s}
+@keyframes rise{to{opacity:1;transform:none;}}
+}
+</style>
+</head>
+<body>
+<div class="navstack">
+<div class="globalnav">
+<div class="wrap-wide">
+<strong>중앙대학교 정치국제학과</strong>
+<div class="nav-right">
+<span>2026-2학기 이혜정 교수님 CAU 세미나</span>
+</div>
+</div>
+</div>
+<nav class="subnav" aria-label="섹션 바로가기">
+<div class="wrap-wide">
+<p class="crumb">
+<span class="lv2">정치국제학과 졸업해서 뭐 할래?</span>
+</p>
+<div class="tabs">
+<a href="#about">개관</a>
+<a href="#speakers">연사 소개</a>
+<a href="#venue">오시는 길</a>
+</div>
+</div>
+</nav>
+</div>
+<main>
+<section class="hero atmo" id="top">
+<div class="wrap">
+<p class="kicker rise">2026-2학기 이혜정 교수님 CAU 세미나</p>
+<h1 class="h1 rise">정치국제학과 졸업해서<br>뭐 할래?</h1>
+<ul class="fields rise">
+<li>언론</li><li>공직</li><li>법조</li><li>창업</li>
+</ul>
+<p class="lead rise">네 갈래로 나간 선배들이 지금 무슨 일을 하고 있는지, 거기까지 어떻게 갔는지 직접 이야기합니다.</p>
+<dl class="spec glass rise">
+<div><dt>날짜</dt><dd>2026년 10월 8일 목요일</dd></div>
+<div><dt>시간</dt><dd>오후 6시 30분</dd></div>
+<div><dt>장소</dt><dd>대학원 5층 대회의실</dd></div>
+</dl>
+<div class="cta-row rise">
+<a class="btn btn-primary" href="#speakers">연사 보기</a>
+<a class="btn btn-glass" href="#venue">오시는 길</a>
+</div>
+<p class="dday rise" id="dday" hidden></p>
+</div>
+</section>
+<section class="tile-dark atmo" id="about">
+<div class="wrap">
+<figure class="poll glass-dark">
+<figcaption class="poll-label">명절에 가장 많이 듣는 질문 1위</figcaption>
+<blockquote class="poll-q">&ldquo;정치국제학과 졸업해서 대체 뭐 할 거니?&rdquo;</blockquote>
+<p class="poll-note">정치외교학과가 설립된 1949년부터 2026년 현재까지, 압도적 1위.</p>
+</figure>
+<div class="overview">
+<h2 class="h2">정치국제학과 나오면<br>(대체) 뭘 할 수 있을까요?</h2>
+<p class="lead ov-q">국회의원? 외교관? 아니면 제3의 길?</p>
+<p class="ov-body">이 질문에 다양한 해답을 드립니다. 2026년 10월 8일, 그동안 만날 수 없었던 선배들과의 만남을 통해 어떤 도전을 꿈꿀 수 있는지 경험해 보세요.</p>
+<p class="ov-note">본 행사는 2026-2학기 이혜정 교수님 CAU 세미나의 일환으로 운영됩니다.</p>
+</div>
+<div class="agenda glass-dark">
+<h3 class="h3">진행 순서</h3>
+<p class="host">사회 &middot; 신세민<span>정치국제 25 &middot; 정치국제학과 학생회장</span></p>
+<ol>
+<li><span class="slot">18:15 &ndash; 18:30</span><span class="what">입장</span></li>
+<li><span class="slot">18:30 &ndash; 18:35</span><span class="what">여는 말<span class="who">이혜정 교수 &middot; 정치국제학과<br>최영진 교수 &middot; 정치국제학과 학과장</span></span></li>
+<li><span class="slot">18:35 &ndash; 19:25</span><span class="what">발표<span class="who">김대홍 &middot; KBS 시사보도본부장<br>김상기 &middot; 통일부 장관정책보좌관<br>박현정 &middot; 넥스트증권 법무팀장<br>김아현 &middot; (주)액시옴 대표</span></span></li>
+<li><span class="slot">19:25 &ndash; 20:25</span><span class="what">질의응답<span class="who">연사 전원</span></span></li>
+<li><span class="slot">20:25 &ndash; 20:30</span><span class="what">마무리</span></li>
+<li><span class="slot">20:30</span><span class="what">뒤풀이 이동<span class="who">BHC 중앙대점</span></span></li>
+</ol>
+</div>
+</div>
+</section>
+<section class="tile-parchment atmo" id="speakers">
+<div class="wrap-mid">
+<div class="sec-head">
+<h2 class="h2">연사 소개</h2>
+<p class="lead">학번은 서른 해가 차이 나고 하는 일도 전부 다르지만, 출발점은 같았습니다.</p>
+</div>
+<div class="speakers">
+<article class="speaker glass">
+<div>
+<span class="sp-field">언론</span>
+<h3 class="sp-name">김대홍</h3>
+<p class="sp-title">KBS 시사보도본부장</p>
+<p class="sp-cohort">정치외교 85학번</p>
+<p class="sp-link">이혜정 교수 1호 박사 · 2013</p>
+</div>
+<div class="sp-body">
+<p>1985년 중앙대학교 정치외교학과에 입학, 1995년 KBS 18기 기자로 입사했다. 2009년부터 KBS 도쿄특파원으로 재직하면서 김연아, 손 마사요시 등과의 인터뷰를 진행하였고, 2011년 동일본대지진 당시 한국 언론의 대표 주자로 활약했다.</p>
+<p>2007-2013년까지 이혜정 교수님의 박사 지도를 받았으며, 2013년 8월 이혜정 교수님의 1호 박사 학위자가 되었다.</p>
+</div>
+<p class="sp-path">
+<em>정치외교 입학 1985</em><i>▸</i><em>KBS 기자 1995</em><i>▸</i><em>도쿄특파원 2009</em><i>▸</i><b>KBS 시사보도본부장</b>
+</p>
+</article>
+<article class="speaker glass">
+<div>
+<span class="sp-field">공직</span>
+<h3 class="sp-name">김상기</h3>
+<p class="sp-title">통일부 장관정책보좌관</p>
+<p class="sp-cohort">대학원 정치외교 04학번</p>
+<p class="sp-link">중앙대학교 총학생회장 · 1995</p>
+</div>
+<div class="sp-body">
+<p>1991년 중앙대학교 기계공학과에 입학, 1995년 중앙대학교 총학생회장으로 선출되었다. 2004년 중앙대학교 정치외교학과 석사과정에 입학, 이혜정 교수님의 석사 지도를 받았다.</p>
+<p>2007-2012년 미국 아이오와 대학교 정치학 박사학위를 취득했고, 한국에 돌아온 이후 연구-교육 활동을 통해 더 좋은, 더 평화로운 대한민국을 만들기 위해 노력하고 있다.</p>
+</div>
+<p class="sp-path">
+<em>기계공학 입학 1991</em><i>▸</i><em>총학생회장 1995</em><i>▸</i><em>정치외교 석사 2006</em><i>▸</i><em>아이오와대 박사 2012</em><i>▸</i><b>통일부 장관정책보좌관</b>
+</p>
+</article>
+<article class="speaker glass">
+<div>
+<span class="sp-field">법조</span>
+<h3 class="sp-name">박현정</h3>
+<p class="sp-title">넥스트증권 법무팀장</p>
+<p class="sp-cohort">정치외교 03학번</p>
+<p class="sp-link">제11회 전국대학생 모의유엔회의<br class="br-desk"> 중앙대학교 대표(파키스탄) · 2005</p>
+</div>
+<div class="sp-body">
+<p>2003년 중앙대학교 정치외교학과에 입학, 2005년 제11회 전국대학생 모의유엔회의 중앙대학교 대표로 선발되면서 본격적으로 이혜정 교수님과의 인연이 시작되었다.</p>
+<p>2011년 인하대학교 법학전문대학원에 입학, 2014년에 변호사시험을 통과했다.</p>
+</div>
+<p class="sp-path">
+<em>정치외교 입학 2003</em><i>▸</i><em>모의유엔 대표 2005</em><i>▸</i><em>인하대 로스쿨 2011</em><i>▸</i><em>변호사시험 합격 2014</em><i>▸</i><b>넥스트증권 법무팀장</b>
+</p>
+</article>
+<article class="speaker glass">
+<div>
+<span class="sp-field">창업</span>
+<h3 class="sp-name">김아현</h3>
+<p class="sp-title">(주)액시옴 대표</p>
+<p class="sp-cohort">정치국제 15학번</p>
+<p class="sp-link">교육 스타트업 올레스코 창업·엑시트 · 2023</p>
+</div>
+<div class="sp-body">
+<p>2015년 중앙대학교 정치국제학과에 입학, 졸업 후 2021년 카페24에서 마케팅커뮤니케이션 전략기획을 맡았다. 와이즐리컴퍼니 Product Manager를 거쳐 2023년 교육 서비스 법인 올레스코를 창업했고, NPS 9.89점과 재구매율 92%를 기록한 뒤 매각했다. 2024년에는 앳홈에서 뷰티 브랜드 톰(THOME)의 사업을 총괄하며 6개월 만에 매출을 3배 이상 끌어올렸다.</p>
+<p>현재 AXIOM을 설립해 스킨 리커버리 브랜드 roadic을 운영하고 있으며, 최근 카카오벤처스와 퓨처플레이로부터 투자 유치를 완료했다.</p>
+</div>
+<p class="sp-path">
+<em>정치국제 입학 2015</em><i>▸</i><em>카페24 2021</em><i>▸</i><em>와이즐리컴퍼니 PM 2022</em><i>▸</i><em>올레스코 창업 2023</em><i>▸</i><em>앳홈 톰 사업총괄 2024</em><i>▸</i><b>(주)액시옴 대표</b>
+</p>
+</article>
+</div>
+</div>
+</section>
+<section class="atmo" id="venue">
+<div class="wrap-wide">
+<div class="sec-head">
+<h2 class="h2">오시는 길</h2>
+</div>
+<div class="venue">
+<div class="infocard glass">
+<dl class="infolist">
+<dt>장소</dt>
+<dd>중앙대학교 대학원 5층 대회의실</dd>
+<dt>주소</dt>
+<dd>서울특별시 동작구 흑석로 84<span class="sub">중앙대학교 서울캠퍼스</span></dd>
+<dt>문의</dt>
+<dd>
+정치국제학과 학생회장 신세민
+<span class="sub">
+<a href="tel:01026949999">010-2694-9999</a><br>
+<a href="mailto:psir.studentcouncil@gmail.com">psir.studentcouncil@gmail.com</a>
+</span>
+</dd>
+</dl>
+</div>
+<figure class="mapcard glass">
+<iframe class="mapframe" src="https://www.google.com/maps?q=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90+%EB%8C%80%ED%95%99%EC%9B%90&amp;output=embed&amp;hl=ko" title="중앙대학교 대학원 위치" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+<figcaption class="maplinks">
+<a class="btn btn-primary btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90%20%EB%8C%80%ED%95%99%EC%9B%90" target="_blank" rel="noopener">구글 지도</a>
+<a class="btn btn-glass btn-sm" href="https://map.naver.com/p/search/%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90%20%EB%8C%80%ED%95%99%EC%9B%90" target="_blank" rel="noopener">네이버 지도</a>
+<a class="btn btn-glass btn-sm" href="https://map.kakao.com/?q=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90%20%EB%8C%80%ED%95%99%EC%9B%90" target="_blank" rel="noopener">카카오맵</a>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap-wide">
+<div class="credits">
+<div>
+<p class="credit-label">주최</p>
+<p class="credit-body">중앙대학교 정치국제학과<br>이혜정 교수님 지도학생 모임</p>
+</div>
+<div>
+<p class="credit-label">주관</p>
+<p class="credit-body">중앙대학교 정치국제학과<br>학생회 모음</p>
+</div>
+</div>
+<div class="footmeta">
+<p class="fine">2026년 10월 8일 목요일 오후 6시 30분 · 중앙대학교 대학원 5층 대회의실</p>
+<p class="fine">사정에 따라 진행 순서와 연사가 변경될 수 있습니다.</p>
+</div>
+</div>
+</footer>
+<script>
+(function(){
+var el = document.getElementById('dday');
+if(!el) return;
+var dayMs = 86400000, off = 9*3600000;
+var target = new Date('2026-10-08T18:30:00+09:00').getTime();
+var eventDay = Math.floor((new Date('2026-10-08T00:00:00+09:00').getTime() + off) / dayMs);
+var today = Math.floor((Date.now() + off) / dayMs);
+var diff = eventDay - today;
+var text;
+if (Date.now() > target + 5*3600000) text = '행사가 종료되었습니다';
+else if (diff > 0) text = '행사까지 <b>' + diff + '일</b> 남았습니다';
+else text = '<b>오늘</b> 열립니다';
+el.innerHTML = text;
+el.hidden = false;
+})();
+(function(){
+var links = Array.prototype.slice.call(document.querySelectorAll('.tabs a'));
+var secs = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+var ticking = false;
+function spy(){
+ticking = false;
+var y = window.pageYOffset + 170, idx = -1;
+secs.forEach(function(s, i){ if (s && s.offsetTop <= y) idx = i; });
+links.forEach(function(a, i){
+var on = (i === idx);
+a.classList.toggle('on', on);
+if (on) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current');
+});
+}
+function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(spy); } }
+window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', onScroll, {passive:true});
+spy();
+})();
+</script>
+</body>
+</html>
